@@ -1,3 +1,4 @@
+// async test awaits the callback if that returns an error
 async function test(title, callback) {
   try {
     await callback()
@@ -8,6 +9,7 @@ async function test(title, callback) {
   }
 }
 
+// can use expect anywhere now
 function expect(actual) {
   return {
     toBe(expected) {
@@ -18,5 +20,6 @@ function expect(actual) {
   }
 }
 
+// setup globals in all of our test files
 global.test = test
 global.expect = expect

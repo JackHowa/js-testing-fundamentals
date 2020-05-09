@@ -17,5 +17,6 @@ function expect(actual) {
         throw new Error(`${actual} is not equal to ${expected}`)
       }
     }
+    // could add others like toEqual, etc, other jest ones
   }
 }
